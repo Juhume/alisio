@@ -1,0 +1,29 @@
+{
+    "id": "io.github.juhume.Alisio",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "51",
+    "sdk": "org.gnome.Sdk",
+    "command": "io.github.juhume.Alisio",
+    "finish-args": [
+        "--share=network",
+        "--share=ipc",
+        "--socket=wayland",
+        "--socket=fallback-x11",
+        "--device=dri"
+    ],
+    "cleanup": ["/include", "/lib/pkgconfig", "/share/doc"],
+    "modules": [
+        {
+            "name": "alisio",
+            "buildsystem": "meson",
+            "run-tests": true,
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": ".",
+                    "skip": ["node_modules", "_build", ".flatpak-builder", ".git", "docs", "repo"]
+                }
+            ]
+        }
+    ]
+}

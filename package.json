@@ -1,0 +1,29 @@
+{
+  "name": "alisio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "El aire acondicionado de Home Assistant, desde el escritorio de Linux",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "tsc --noEmit",
+    "test": "node build.mjs --tests && node tests/run.mjs",
+    "mock": "node build.mjs --tests && gjs -m build/tests/mockServer.js",
+    "flatpak": "node build.mjs && mkdir -p _build && flatpak-builder --user --install --force-clean _build/flatpak io.github.juhume.Alisio.json > _build/flatpak.log 2>&1 || (tail -30 _build/flatpak.log; exit 1)",
+    "start": "flatpak run io.github.juhume.Alisio",
+    "test:ui": "npm run flatpak && node build.mjs --tests && flatpak run --env=GSETTINGS_BACKEND=memory --env=ALISIO_SHOTS=${ALISIO_SHOTS:-} --filesystem=$PWD/build/tests:ro ${ALISIO_SHOTS:+--filesystem=$ALISIO_SHOTS} --command=gjs io.github.juhume.Alisio -m $PWD/build/tests/window.uitest.js"
+  },
+  "devDependencies": {
+    "@girs/adw-1": "^5.5.0",
+    "@girs/gio-2.0": "^5.5.0",
+    "@girs/gjs": "^5.5.0",
+    "@girs/glib-2.0": "^5.5.0",
+    "@girs/gobject-2.0": "^5.5.0",
+    "@girs/gtk-4.0": "^5.5.0",
+    "@girs/secret-1": "^5.5.0",
+    "@girs/soup-3.0": "^5.5.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  }
+}

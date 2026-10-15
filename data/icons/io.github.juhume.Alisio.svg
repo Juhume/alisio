@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Provisional: tres líneas de aire inclinadas sobre una baldosa. -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d4b57"/>
+      <stop offset="1" stop-color="#0d2228"/>
+    </linearGradient>
+    <linearGradient id="air" gradientUnits="userSpaceOnUse" x1="24" y1="96" x2="104" y2="32">
+      <stop offset="0" stop-color="#4FB0C6"/>
+      <stop offset="1" stop-color="#c9eef5"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="14" width="112" height="106" rx="26" fill="#081519"/>
+  <rect x="8" y="8" width="112" height="106" rx="26" fill="url(#tile)"/>
+  <g fill="none" stroke="url(#air)" stroke-width="10" stroke-linecap="round" transform="rotate(-16 64 61)">
+    <path d="M32 40 H84"/>
+    <path d="M42 61 H98"/>
+    <path d="M30 82 H76"/>
+  </g>
+</svg>

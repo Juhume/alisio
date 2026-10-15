@@ -1,0 +1,15 @@
+#!@GJS@ -m
+// Lanzador: registra el gresource con el código de la app y arranca.
+
+import Gio from 'gi://Gio';
+import system from 'system';
+
+Gio.Resource.load('@PKGDATADIR@/@APP_ID@.src.gresource')._register();
+
+const {main} = await import('resource:///io/github/juhume/Alisio/js/main.js');
+const code = await main([system.programInvocationName, ...system.programArgs], {
+    appId: '@APP_ID@',
+    version: '@VERSION@',
+    localedir: '@LOCALEDIR@',
+});
+system.exit(code);

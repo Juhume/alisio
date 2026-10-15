@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="io.github.juhume.Alisio">
+  <schema id="io.github.juhume.Alisio" path="/io/github/juhume/Alisio/">
+    <key name="ha-url" type="s">
+      <default>''</default>
+      <summary>Dirección de Home Assistant</summary>
+      <description>Por ejemplo http://192.168.1.10:8123. El token no se guarda aquí, sino en el llavero.</description>
+    </key>
+    <key name="window-width" type="i">
+      <default>400</default>
+      <summary>Ancho de la ventana</summary>
+    </key>
+    <key name="window-height" type="i">
+      <default>680</default>
+      <summary>Alto de la ventana</summary>
+    </key>
+    <key name="window-maximized" type="b">
+      <default>false</default>
+      <summary>Ventana maximizada</summary>
+    </key>
+  </schema>
+</schemalist>

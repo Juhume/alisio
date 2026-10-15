@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Alisio
+Comment=El aire acondicionado de casa, a un clic
+Exec=io.github.juhume.Alisio
+Icon=io.github.juhume.Alisio
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=aire;climatización;termostato;Home Assistant;air conditioning;
+StartupNotify=true

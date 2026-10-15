@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.juhume.Alisio</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Alisio</name>
+  <summary>El aire acondicionado de casa, a un clic</summary>
+  <description>
+    <p>
+      Alisio controla los aires acondicionados de Home Assistant desde el escritorio:
+      enciende y apaga cada zona, cambia la consigna y la velocidad del ventilador, y
+      muestra al momento lo que se cambie desde el móvil o el mando.
+    </p>
+    <p>
+      No necesita instalar nada en Home Assistant y lee de cada aparato lo que sabe hacer.
+    </p>
+  </description>
+  <developer id="io.github.juhume">
+    <name>juhume</name>
+  </developer>
+  <launchable type="desktop-id">io.github.juhume.Alisio.desktop</launchable>
+  <url type="homepage">https://github.com/juhume/alisio</url>
+  <url type="bugtracker">https://github.com/juhume/alisio/issues</url>
+  <content_rating type="oars-1.1"/>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </supports>
+  <releases>
+    <release version="0.1.0" date="2026-10-15">
+      <description>
+        <p>Primera versión de desarrollo.</p>
+      </description>
+    </release>
+  </releases>
+</component>

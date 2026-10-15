@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/io/github/juhume/Alisio">
+    <file alias="js/main.js">main.js</file>
+    <!-- libadwaita carga sola el style.css de la ruta base de la app. -->
+    <file>style.css</file>
+  </gresource>
+</gresources>

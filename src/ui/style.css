@@ -1,0 +1,34 @@
+/* El acento de la app sigue al modo de la máquina: turquesa en frío, ámbar en calor. */
+
+window.mode-cool {
+    --accent-bg-color: #4FB0C6;
+    --accent-fg-color: #0d2228;
+    --accent-color: #1d7586;
+}
+
+window.mode-heat {
+    --accent-bg-color: #F0A73A;
+    --accent-fg-color: #2a1606;
+    --accent-color: #9a5a00;
+}
+
+@media (prefers-color-scheme: dark) {
+    window.mode-cool { --accent-color: #6cc4d8; }
+    window.mode-heat { --accent-color: #f4b95e; }
+}
+
+/* Lo que no se puede tocar mientras no hay conexión se apaga de color. */
+.home.stale {
+    filter: saturate(0);
+    opacity: 0.7;
+}
+
+.reading {
+    font-feature-settings: "tnum";
+}
+
+/* El botón activo de Frío / Calor lleva el color de su modo: se ve aunque todo esté apagado. */
+toggle-group.mode-selector {
+    --active-toggle-bg-color: var(--accent-bg-color);
+    --active-toggle-fg-color: var(--accent-fg-color);
+}

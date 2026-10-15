@@ -1,0 +1,11 @@
+node_modules/
+build/
+_build/
+.flatpak-builder/
+repo/
+*.flatpak
+
+# Material de trabajo personal: se queda en este portátil, no se publica.
+CLAUDE.md
+FORJULIO.md
+docs/maqueta/
